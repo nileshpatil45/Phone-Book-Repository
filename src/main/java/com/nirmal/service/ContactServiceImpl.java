@@ -14,8 +14,14 @@ public class ContactServiceImpl implements ContactServiceI {
 	
 	@Override
 	public boolean savecontact(Contact contact) {
-		// TODO Auto-generated method stub
+		Contact save = this.contactRepository.save(contact);
+		
+		if(save !=null) {
+			return true;
+		}
+		else {			
 		return false;
+		}
 	}
 
 }

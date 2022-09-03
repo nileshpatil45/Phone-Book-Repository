@@ -26,12 +26,64 @@ public class Contact {
 	@Column(name="CONTACT_EMAIL")
 	private String contactEmail;
 	@Column(name="CONTACT_ACTIVESWITCH")
-	private Character ActiveSwitch;
+	private Character activeSwitch;
 	@Column(name="CREATED_DATE",updatable=false)
 	@CreationTimestamp
 	private LocalDate createdDate;
 	@Column(name="UPDATEED_DATE",insertable=false)
 	@UpdateTimestamp
 	private LocalDate updateddate;
+	
+	public Integer getContactId() {
+		return contactId;
+	}
+	public void setContactId(Integer contactId) {
+		this.contactId = contactId;
+	}
+	public String getContactName() {
+		return contactName;
+	}
+	public void setContactName(String contactName) {
+		this.contactName = contactName;
+	}
+	public String getContactNumber() {
+		return contactNumber;
+	}
+	public void setContactNumber(String contactNumber) {
+		this.contactNumber = contactNumber;
+	}
+	public String getContactEmail() {
+		return contactEmail;
+	}
+	public void setContactEmail(String contactEmail) {
+		this.contactEmail = contactEmail;
+	}
+	public Character getActiveSwitch() {
+		return activeSwitch;
+	}
+	public void setActiveSwitch(Character activeSwitch) {
+		activeSwitch = activeSwitch;
+	}
+	public LocalDate getCreatedDate() {
+		return createdDate;
+	}
+	public void setCreatedDate(LocalDate createdDate) {
+		this.createdDate = createdDate;
+	}
+	public LocalDate getUpdateddate() {
+		return updateddate;
+	}
+	public void setUpdateddate(LocalDate updateddate) {
+		this.updateddate = updateddate;
+	}
+	
+	@Override
+	public String toString() {
+		return "Contact [contactId=" + contactId + ", contactName=" + contactName + ", contactNumber=" + contactNumber
+				+ ", contactEmail=" + contactEmail + ", ActiveSwitch=" + activeSwitch + ", createdDate=" + createdDate
+				+ ", updateddate=" + updateddate + "]";
+	}
+	
+	
 	
 }
