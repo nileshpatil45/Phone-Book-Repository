@@ -10,4 +10,5 @@ public interface ContactServiceI {
 
 	public boolean savecontact(Contact contact);
 	public List<Contact> getall();
+	public Contact getcontact(Integer id);
 }
