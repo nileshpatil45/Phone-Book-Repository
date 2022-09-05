@@ -83,6 +83,21 @@ public class Contact {
 				+ ", contactEmail=" + contactEmail + ", ActiveSwitch=" + activeSwitch + ", createdDate=" + createdDate
 				+ ", updateddate=" + updateddate + "]";
 	}
+	public Contact(Integer contactId, String contactName, String contactNumber, String contactEmail,
+			Character activeSwitch, LocalDate createdDate, LocalDate updateddate) {
+		super();
+		this.contactId = contactId;
+		this.contactName = contactName;
+		this.contactNumber = contactNumber;
+		this.contactEmail = contactEmail;
+		this.activeSwitch = activeSwitch;
+		this.createdDate = createdDate;
+		this.updateddate = updateddate;
+	}
+	public Contact() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
 	
 	

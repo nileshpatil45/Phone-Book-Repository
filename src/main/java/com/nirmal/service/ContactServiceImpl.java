@@ -40,4 +40,34 @@ public class ContactServiceImpl implements ContactServiceI {
 		return id2;
 	}
 
+	@Override
+	public boolean updatecontact(Contact contact) {
+		Contact save = this.contactRepository.save(contact);
+		if(save!=null) {
+			return true;
+
+		}else {
+			return false;
+
+		}
+	}
+
+	@Override
+	public boolean deletebyid(Integer id) {
+	//	boolean existbyid= this.contactRepository.existsById(id);
+	//	if(existbyid) {
+	//		this.contactRepository.deleteById(id);
+			return true;
+	//	}else {
+	//		return false;
+
+	//	}
+
+			Optional<Contact> contact = contactRepository.findById(id);
+			
+	}
 }
+
+		
+
+		
